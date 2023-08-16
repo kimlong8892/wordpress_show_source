@@ -14,12 +14,10 @@
 <script src="<?php echo getPublicFile('theme/vendor/perfect-scrollbar/perfect-scrollbar.min.js'); ?>"></script>
 <script src="<?php echo getPublicFile('theme/js/main.js'); ?>"></script>
 
-
-
 <div class="container">
     <footer class="py-5">
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>© <?php echo date('Y'); ?> Company, Inc. All rights reserved.</p>
+            <p>© <?php echo date('Y'); ?> - <?php echo get_bloginfo('name'); ?></p>
         </div>
     </footer>
 </div>
