@@ -14,6 +14,19 @@
 <script src="<?php echo getPublicFile('theme/vendor/perfect-scrollbar/perfect-scrollbar.min.js'); ?>"></script>
 <script src="<?php echo getPublicFile('theme/js/main.js'); ?>"></script>
 
+
+<script>
+    $(document).ready(function () {
+        $('.how-pagination1').click(function () {
+            const href = $(this).find('a').attr('href');
+
+            if (href !== undefined) {
+                window.location.href = href;
+            }
+        });
+    });
+</script>
+
 <div class="container">
     <footer class="py-5">
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
