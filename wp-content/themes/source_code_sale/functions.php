@@ -3,6 +3,22 @@
     include 'helpers/functions.php';
 
 
+    /*
+    * =================== START THEME OPTIONS PAGE ===================
+    */
+    if(function_exists('acf_add_options_page')) {
+        acf_add_options_page(array(
+            'page_title' => 'Site configs',
+            'menu_title' => 'Site configs',
+            'menu_slug' => '',
+            'position' => 2,
+            'icon_url' => false
+        ));
+    }
+    /*
+    * =================== END THEME OPTIONS PAGE ===================
+    */
+
     // remove role
     remove_role('subscriber');
     remove_role('editor');
@@ -55,10 +71,6 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
 } else {
     // file exists... require it.
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-}
-
-function register_my_session(){
-
 }
 
 add_action('init', function () {

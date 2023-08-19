@@ -39,7 +39,7 @@ if ($total > $itemPerPage) {
 <body class="animsition">
 <?php get_header(); ?>
 
-<div class="container m-t-150">
+<div class="container">
     <div class="row isotope-grid">
         <?php foreach ($listProduct as $product): ?>
             <?php
@@ -59,7 +59,6 @@ if ($total > $itemPerPage) {
                                 <a href="<?php echo $product->get_permalink(); ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                     <?php echo $product->get_title(); ?>
                                 </a>
-
                                 <span class="stext-105 cl3">
                                <?php echo $product->get_price_html() ?>
                             </span>
@@ -72,21 +71,11 @@ if ($total > $itemPerPage) {
     </div>
 
 
-    <?php if ($total > $itemPerPage && !empty($paginate)): ?>
-        <div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-            <?php foreach ($paginate as $item): ?>
-                <?php if (str_contains($item, 'aria-current="page"')): ?>
-                    <span class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-                        <?php echo $item; ?>
-                    </span>
-                <?php else: ?>
-                    <span class="flex-c-m how-pagination1 trans-04 m-all-7">
-                        <?php echo $item; ?>
-                    </span>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
+    <?php get_template_part('template-parts/include/paginate_render', null, [
+        'total' => $total,
+        'itemPerPage' => $itemPerPage,
+        'paginate' => $paginate
+    ]); ?>
 </div>
 
 
