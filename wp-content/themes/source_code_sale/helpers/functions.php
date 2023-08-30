@@ -127,5 +127,16 @@ if (!function_exists('getAllMenuLevels')) {
 
         return getMenuItemsRecursive($menuItems);
     }
+}
 
+if (!function_exists('getFeaturedImage')) {
+    function getFeaturedImage($postItem) {
+        $imageUrl = get_the_post_thumbnail_url($postItem, 'full');
+        $imageAlt = get_post_meta(attachment_url_to_postid($imageUrl), '_wp_attachment_image_alt', TRUE);
+
+        return [
+            'url' => $imageUrl,
+            'alt' => $imageAlt
+        ];
+    }
 }
