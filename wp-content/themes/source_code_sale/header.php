@@ -1,5 +1,9 @@
 <?php
 $logo = get_field('logo', 'options');
+$menu = wp_get_nav_menu_object(get_nav_menu_locations()['main-menu']);
+$listMenuMain = wp_get_nav_menu_items($menu->term_id, array('order' => 'DESC'));
+
+phpinfo();
 ?>
 <header>
     <!-- Header desktop -->
@@ -93,7 +97,6 @@ $logo = get_field('logo', 'options');
 				</span>
         </div>
     </div>
-
 
     <!-- Menu Mobile -->
     <div class="menu-mobile">
