@@ -100,3 +100,32 @@ if (!function_exists('getNextIcon')) {
         return '<i class="fa fa-arrow-right"></i>';
     }
 }
+
+if (!function_exists('getMenuItemsRecursive')) {
+    function getMenuItemsRecursive($items, $parentId = 0): array {
+        $result = [];
+
+        foreach ($items as $item) {
+            if ($item->menu_item_parent == $parentId) {
+                $childItems = getMenuItemsRecursive($items, $item->ID);
+                if (!empty($childItems)) {
+                    $item->child_items = $childItems;
+                }
+                $result[] = $item;
+            }
+        }
+
+        return $result;
+    }
+}
+
+if (!function_exists('getAllMenuLevels')) {
+    function getAllMenuLevels($menuName): array {
+        $menuLocations = get_nav_menu_locations();
+        $menuId = $menuLocations[$menuName];
+        $menuItems = wp_get_nav_menu_items($menuId);
+
+        return getMenuItemsRecursive($menuItems);
+    }
+
+}

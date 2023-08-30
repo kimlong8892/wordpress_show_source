@@ -1,9 +1,7 @@
 <?php
 $logo = get_field('logo', 'options');
-$menu = wp_get_nav_menu_object(get_nav_menu_locations()['main-menu']);
-$listMenuMain = wp_get_nav_menu_items($menu->term_id, array('order' => 'DESC'));
-
-phpinfo();
+$listMenuMain = getAllMenuLevels('main-menu');
+$a = 1;
 ?>
 <header>
     <!-- Header desktop -->
@@ -34,34 +32,21 @@ phpinfo();
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li class="active-menu">
-                            <a href="index.html">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Homepage 1</a></li>
-                                <li><a href="home-02.html">Homepage 2</a></li>
-                                <li><a href="home-03.html">Homepage 3</a></li>
-                            </ul>
-                        </li>
+                        <?php foreach ($listMenuMain as $menu): ?>
+                            <?php if (empty($menu->child_items)): ?>
+                                <li>
+                                    <a href="<?php echo $menu->url; ?>"><?php echo $menu->title; ?></a>
+                                </li>
+                            <?php else: ?>
+                                <li>
+                                    <a href="<?php echo $menu->url; ?>"><?php echo $menu->title; ?></a>
+                                    <?php get_template_part('template-parts/menu/list_child', null, [
+                                        'listChild' => $menu->child_items,
+                                    ]); ?>
+                                </li>
+                            <?php endif; ?>
 
-                        <li>
-                            <a href="product.html">Shop</a>
-                        </li>
-
-                        <li class="label1" data-label1="hot">
-                            <a href="shoping-cart.html">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
 
@@ -117,37 +102,22 @@ phpinfo();
         </ul>
 
         <ul class="main-menu-m">
-            <li>
-                <a href="index.html">Home</a>
-                <ul class="sub-menu-m">
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
-                </ul>
-                <span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
-            </li>
+            <?php foreach ($listMenuMain as $menu): ?>
+                <?php if (empty($menu->child_items)): ?>
+                    <li>
+                        <a href="<?php echo $menu->url; ?>"><?php echo $menu->title; ?></a>
+                    </li>
+                <?php else: ?>
+                    <li>
+                        <a href="<?php echo $menu->url; ?>"><?php echo $menu->title; ?></a>
+                        <?php get_template_part('template-parts/menu/list_child', null, [
+                            'listChild' => $menu->child_items,
+                            'mobileClass' => 'm'
+                        ]); ?>
+                    </li>
+                <?php endif; ?>
 
-            <li>
-                <a href="product.html">Shop</a>
-            </li>
-
-            <li>
-                <a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
-            </li>
-
-            <li>
-                <a href="blog.html">Blog</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
+            <?php endforeach; ?>
         </ul>
     </div>
 
