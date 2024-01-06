@@ -121,11 +121,20 @@ if (!function_exists('getMenuItemsRecursive')) {
 
 if (!function_exists('getAllMenuLevels')) {
     function getAllMenuLevels($menuName): array {
-        $menuLocations = get_nav_menu_locations();
-        $menuId = $menuLocations[$menuName];
-        $menuItems = wp_get_nav_menu_items($menuId);
+        if (empty($menuName)) {
+            return [];
+        }
 
-        return getMenuItemsRecursive($menuItems);
+        $menuLocations = get_nav_menu_locations();
+
+        if (!empty($menuLocations[$menuName])) {
+            $menuId = $menuLocations[$menuName];
+            $menuItems = wp_get_nav_menu_items($menuId);
+
+            return getMenuItemsRecursive($menuItems);
+        }
+
+        return [];
     }
 }
 
