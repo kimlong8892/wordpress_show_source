@@ -1,8 +1,0 @@
-2023-08-19T14:17:01+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Variable::get_var() in /var/www/html/wordpress_show_source/wp-content/themes/source_code_sale/single-product.php:10
-Stack trace:
-#0 /var/www/html/wordpress_show_source/wp-includes/template-loader.php(106): include()
-#1 /var/www/html/wordpress_show_source/wp-blog-header.php(19): require_once('...')
-#2 /var/www/html/wordpress_show_source/index.php(17): require('...')
-#3 {main}
-  thrown in /var/www/html/wordpress_show_source/wp-content/themes/source_code_sale/single-product.php on line 10
-
