@@ -42,7 +42,7 @@ services:
       MARIADB_PASSWORD: Admin123
     ports:
       - "${MYSQL_PORT}:3306"
-    volumes:
+    #volumes:
       #- ./db/init.sql:/docker-entrypoint-initdb.d/${DB_SOURCE}
       #- ./db/entrypoint.sh:/docker-entrypoint-initdb.d/${DB_CMD}
     networks:
