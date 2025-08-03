@@ -45,9 +45,20 @@ services:
     #volumes:
       #- ./db/init.sql:/docker-entrypoint-initdb.d/${DB_SOURCE}
       #- ./db/entrypoint.sh:/docker-entrypoint-initdb.d/${DB_CMD}
+    command:
+      [
+        "--server-id=1",
+        "--log-bin=mysql-bin",
+        "--binlog-format=ROW",
+        "--binlog-row-image=FULL",
+        "--expire_logs_days=10",
+        "--max_binlog_size=100M",
+        "--binlog-do-db=wp_db"
+      ]
     networks:
       - app-wp-network
 #Docker Networks
 networks:
   app-wp-network:
     driver: bridge
+
