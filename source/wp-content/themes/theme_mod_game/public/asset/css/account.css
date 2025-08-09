@@ -1,0 +1,750 @@
+.account-director {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 6px;
+    font-family: 'Inter';
+    font-size: 14px;
+    color: #9FA7B5;
+    margin-top: 19px;
+}
+
+.account-director span:last-child {
+    color: #D12142;
+}
+
+.account-container {
+    display: flex;
+    gap: 50px;
+    background: #272A31;
+    border-radius: 8px;
+    height: 650px;
+    overflow: hidden;
+    width: 56vw;
+    padding: 80px 50px;
+}
+
+.account-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ac-avatar-area {
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ac-name {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.ac-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ac-avatar img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.ac-title {
+    font-size: 14px;
+    color: #9FA7B5;
+}
+
+.ac-menu {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ac-menu-logout {
+    padding-left: 20px;
+    color: #9FA7B5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ac-menu-logout:hover {
+    cursor: pointer;
+    color: #b6bece;
+}
+
+.ac-menu-logout i {
+    padding-top: 3px;
+}
+
+.ac-menu-item {
+    font-size: 14px;
+    color: #E0E0E0;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.account-line {
+    background: #3D4047;
+    width: 1px;
+    height: 100%;
+}
+
+.account-right {
+    width: 100%;
+}
+
+.ac-menu-item i {
+    font-size: 27px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ac-menu-item img {
+    width: 30px;
+}
+
+.archiverment {
+    background: linear-gradient(89.93deg, #272A31 10.2%, #222429 20.64%, #1C1F26 76.87%, #272A31 97.49%);
+    height: 132px;
+}
+
+.acc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ac-summary {
+    margin-top: 32px;
+    display: flex;
+    gap: 47px;
+}
+
+.ac-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 24px;
+}
+
+.ac-suma-title {
+    font-size: 14px;
+}
+
+.ac-line-hor {
+    height: 1px;
+    background: #3D4047;
+    margin-top: 29px;
+}
+
+.ac-info-fields {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+
+.ac-change-avatar {
+    color: #9FA7B5;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    width: 100px;
+}
+
+.ac-change-avatar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.ac-row {
+    display: flex;
+    gap: 20px;
+}
+
+#ac-info-save-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 145px;
+    height: 48px;
+    background: #D12142;
+    border-radius: 8px;
+    margin-top: 43px;
+}
+
+.ac-menu-item-active {
+    color: #FFAB2D;
+}
+
+.ac-menu-item:hover {
+    color: #FFAB2D;
+    cursor: pointer;
+}
+
+.acc-deposit-title {
+    font-size: 16px;
+    display: flex;
+}
+
+.packages {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.acc-deposit-package {
+    font-size: 14px;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-goi-item-times {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.acc-deposit-package-active .payment-goi-item-gia-tien {
+    color: red;
+}
+
+.acc-deposit-package-active .payment-goi-item-times {
+    color: greenyellow;
+}
+
+.acc-deposit-package-active .payment-goi-item-line {
+    background: #FFAB2D;
+}
+
+.payment-goi-item-line {
+    width: 86%;
+    height: 1px;
+    background: white;
+}
+
+.payment-goi-item-gia {
+    width: 80%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.payment-goi-item-gia-tien {
+    margin-left: auto;
+}
+
+.acc-deposit-package:hover {
+    cursor: pointer;
+    color: #FFAB2D;
+    border: 1px solid #FFAB2D;
+}
+
+.acc-deposit-package:hover .payment-goi-item-line {
+    background: #FFAB2D;
+}
+
+.acc-deposit-package-active {
+    color: #FFAB2D;
+    border: 1px solid #FFAB2D;
+}
+
+.acc-deposit-methods {
+    display: flex;
+    gap: 45px;
+}
+
+.acc-deposit-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.deposit-method {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.deposit-method-active {
+    color: #FFAB2D;
+}
+
+.deposit-method:hover {
+    cursor: pointer;
+    color: #FFAB2D;
+}
+
+#momo-price {
+    color: #FFAB2D;
+}
+
+.deposit-momo {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.momo-container {
+    display: flex;
+    gap: 16px;
+}
+
+.momo-left {
+    background: #1A1D24;
+    border-radius: 12px;
+    padding: 25px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.momo-left-qr {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;;
+}
+
+.momo-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.momo-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #000000b0;
+}
+
+.momo-code {
+    color: #FFAB2D;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.momo-transfer-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(90deg, rgba(39, 42, 49, 0) 0%, #3D424F 43.55%, #393E49 67.65%, rgba(39, 42, 49, 0) 100%);
+    border-radius: 6px;
+    padding: 20px 60px;
+}
+
+.momo-warning {
+    font-style: italic;
+    color: #989898;
+    font-size: 14px;
+}
+
+.card-type img {
+    width: 100px;
+}
+
+.card-type {
+    width: 125px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    background: white;
+}
+
+.card-types {
+    display: flex;
+    gap: 10px;
+}
+
+.card-type-active {
+    border: 1px solid #FFAB2D;
+    background-color: #FFAB2D;
+}
+
+.card-type:hover {
+    cursor: pointer;
+    border: 1px solid #FFAB2D;
+    background-color: #FFAB2D;
+}
+
+.card-info {
+    display: flex;
+    gap: 16px;
+}
+
+.card-warning {
+    font-size: 14px;
+    font-style: italic;
+    color: #989898;
+}
+
+.acc-deposit-right {
+    margin-top: 30px;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+}
+
+.history-deposit {
+    background: #1A1D24;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.history-deposit td {
+    text-align: left;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+tbody#my-games-body a {
+    color: #D12142;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.history-deposit tr {
+    line-height: 20px;
+}
+
+.history-deposit th {
+    padding: 5px;
+    color: #ffab2d;
+}
+
+.history-line {
+    width: 1px;
+    background: #3D4047;
+}
+
+#ac-info-save-btn:hover {
+    cursor: pointer;
+    background: #ad1632;
+}
+
+.avatar-cover-upload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+.avatar-cover-upload:hover {
+    cursor: pointer;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.473);
+}
+
+.mygame-paging {
+    margin-top: 20px;
+}
+
+.acc-cpu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 60px;
+}
+
+.acc-cpu-title {
+    font-weight: 600;
+}
+
+.acc-cpu-btn {
+    padding: 20px 35px;
+    background: #D12142;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acc-cpu-btn:hover {
+    background: #ad1632;
+    cursor: pointer;
+}
+
+.acc-quest,
+.acc-vip,
+.acc-active {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.bank-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+
+.bank_selection-active {
+    background: #FFAB2D !important;
+}
+
+.bank_selection {
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background: white;
+}
+
+.bank_selection img {
+    width: 100%;
+}
+
+.bank-content {
+    display: grid;
+    gap: 17px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.deposit-bank {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div#bank-btn {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 5px;
+}
+
+.bank-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bank-hint {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 14px;
+    font-style: italic;
+    color: #989898;
+    margin-top: 5px;
+}
+
+.gr-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    padding: 15px 40px;
+    gap: 11px;
+}
+
+.qr-update {
+    padding: 5px 30px;
+    background: #e27f03;
+    border-radius: 15px;
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-image {
+    position: relative;
+}
+
+.qr-hint1 {
+    position: absolute;
+    top: 0px;
+    color: #e28107;
+    font-size: 14px;
+    z-index: 1;
+    background: #0000009e;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+img.qr {
+    width: 14vw;
+    filter: blur(4px);
+}
+
+.qr-hint {
+    color: #ffab2d;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input#momo-number {
+    padding: 15px 20px;
+    border-radius: 7px;
+    background: #242933;
+    border: 1px solid #9c9c9c;
+    color: #9FA7B5;
+    outline: none;
+    width: 350px;
+}
+
+div#momo-btn {
+    margin-top: 0px;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 10px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+.deposit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.deposit-more {
+    margin-left: auto;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #e27f03;
+}
+
+.deposit-more:hover {
+    cursor: pointer;
+    color: #bb6701;
+}
+
+.bank-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+

@@ -1,0 +1,16 @@
+body {
+    padding-top: 55px !important;
+}
+
+.border-radius-10px {
+    border-radius: 10px;
+}
+
+.block-wrap {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.fa.fa-asterisk {
+    color: red !important;
+}

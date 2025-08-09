@@ -1,0 +1,642 @@
+/* REPONSIVE */
+
+@media (max-width: 767px) {
+    .game-update-container,
+    .top-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .top-game-header,.new-game-header,.game-update-header,.top-members-header {
+        gap: 0px;
+    }
+
+    .ggyoutube iframe {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .game-update-container,
+    .top-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .new-game-post-first,
+    .game-thumbnail-first {
+        /* grid-column-start: 1;
+      grid-column-end: 2; */
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .game-update-container,
+    .top-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .new-game-post-first,
+    .game-thumbnail-first {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+}
+
+@media (max-width: 1366px) {
+    .games {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* REPONSIVE */
+
+@media (max-width: 767px) {
+    .new-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .new-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .new-game-post-first {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .new-game-container {
+        /* Auto layout */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .new-game-post-first {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+    .check-config-btn {
+        display: flex;
+    }
+    .new-game-container,
+    .top-game-container,
+    .game-update-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .new-game-container .game-a-tag:nth-of-type(n+6) {
+        display: none;
+    }
+    .game-update-container .game-a-tag:nth-of-type(n+7) {
+        display: none;
+    }
+    .top-game-container .game-a-tag:nth-of-type(n+10) {
+        display: none;
+    }
+    .new-game-post-first {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .filter-btn i {
+        display: none;
+    }
+    .game-info {
+        width: 56vw;
+    }
+    .games-filters {
+        gap: 6px;
+    }
+    .left-menu-items .left-menu-item:nth-of-type(n+9) {
+        display: none;
+    }
+    .game-main-left {
+        width: 100%;
+    }
+    .game-gallery {
+        width: 320px;
+    }
+    .game-big-image {
+        height: 65vh;
+    }
+    .game-relate {
+        display: none;
+    }
+    .game-medias,
+    .game-media {
+        height: 9vh;
+    }
+    .game-specify {
+        margin-top: 20px;
+        gap: 20px 0px;
+        width: 50vw;
+    }
+    .account-container {
+        width: 86vw;
+    }
+    .game-thumbnail-first .game-thumbnail02-image {
+        height: 530px;
+    }
+    .game-stuff {
+        margin-top: 20px;
+    }
+    .account-container {
+        width: 76vw;
+        height: 600px;
+        padding: 30px 25px;
+        gap: 20px
+    }
+    .account-left,
+    .acc-deposit-left {
+        gap: 20px;
+    }
+    .img.qr {
+        width: 20vw;
+    }
+    .ac-menu {
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1919px) {
+    .page-container {
+        width: calc(100% - 315px);
+        left: 270px;
+    }
+    .game-big-image {
+        height: 60vh;
+    }
+    .game-container {
+        gap: 25px;
+    }
+    .game-main-info {
+        gap: 20px;
+    }
+    .game-gallery {
+        width: 340px;
+    }
+    .game-medias,
+    .game-media {
+        height: 7vh;
+    }
+    .game-updated-at {
+        display: none;
+    }
+    .game-hr {
+        display: none;
+    }
+    .game-relate {
+        width: 329px;
+        gap: 20px;
+    }
+    .pc-info-header {
+        padding-bottom: 15px;
+    }
+    .pc-info {
+        gap: 15px;
+    }
+    .pc-suggest,
+    .pc-power {
+        margin-top: 15px;
+    }
+    .game-thumbnail02 {
+        gap: 9px;
+    }
+    .game-thumbnail02-image {
+        height: 180px;
+    }
+    .game-thumbnail-first .game-thumbnail02-image {
+        height: 490px;
+    }
+    .account-container {
+        width: 72vw;
+        height: 680px;
+        padding: 30px 20px;
+    }
+    .game-main-left {
+        width: calc((100% - 48px) / 100 * 74);
+    }
+    .left-menu-items .left-menu-item:nth-of-type(n+8) {
+        display: none;
+    }
+    img.qr {
+        width: 18vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1535px) {
+    .game-big-image {
+        height: 50vh;
+    }
+    .game-info {
+        width: 57vw;
+    }
+    .game-specify {
+        gap: 25px 0px;
+    }
+    .game-stuff {
+        margin-top: 30px;
+    }
+    .games {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .game-thumbnail-first .game-thumbnail02-image {
+        height: 500px;
+    }
+}
+
+
+/* Large screens */
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+    .left-menu-items .left-menu-item:nth-of-type(n+6) {
+        display: none;
+    }
+    .game-big-image {
+        height: 77vh;
+    }
+    .account-container {
+        width: 86vw;
+        height: 600px;
+        padding: 30px 25px;
+        gap: 20px;
+    }
+    .account-left {
+        gap: 15px;
+    }
+    .ac-avatar-area {
+        gap: 10px;
+    }
+    .ac-menu {
+        gap: 13px;
+    }
+    .acc-deposit-left,
+    .bank-left {
+        gap: 15px;
+    }
+    img.qr {
+        width: 22vw;
+    }
+    .check-config-btn {
+        display: flex;
+    }
+    .new-game-container,
+    .top-game-container,
+    .game-update-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .game-update-container .game-a-tag:nth-of-type(n+13) {
+        display: none;
+    }
+
+    .new-game-post-first {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .filter-btn i {
+        display: none;
+    }
+    .game-info {
+        width: 56vw;
+    }
+    .games-filters {
+        gap: 6px;
+    }
+    .game-relate {
+        display: none;
+    }
+    .game-medias,
+    .game-media {
+        height: 9vh;
+    }
+    .game-main-left {
+        width: 100%;
+    }
+    .game-gallery {
+        width: 22vw;
+    }
+    .game-big-image {
+        height: 65vh;
+    }
+    .game-specify {
+        margin-top: 10px;
+        gap: 10px 0px;
+        width: 50vw;
+    }
+    .game-main-info {
+        gap: 20px;
+    }
+    .page-container {
+        left: 272px;
+    }
+    .account-container {
+        width: 86vw;
+    }
+    .game-thumbnail-first .game-thumbnail02-image {
+        height: 530px;
+    }
+    .game-stuff {
+        margin-top: 20px;
+    }
+    .steam-ref iframe {
+        height: 230px;
+    }
+    .history-deposit tr {
+        line-height: 14px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .slider {
+        height: 828px;
+    }
+    .game-thumbnail-background {
+        height: 38vh;
+    }
+    .new-game-container,
+    .game-update-container,
+    .top-game-container,
+    .games {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .account-container {
+        width: 40vw;
+    }
+    img.qr {
+        width: 10vw;
+    }
+    .game-main-left {
+        width: calc((100% - 48px) / 100 * 84);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-mini {
+        display: flex;
+        margin-left: 15px;
+        font-size: 30px;
+    }
+    .search-area {
+        display: none;
+    }
+    .left-menu {
+        width: 0px;
+        overflow: hidden;
+        top: 69px;
+    }
+    .page-container {
+        width: calc(100% - 20px);
+        left: 10px;
+    }
+    .new-game-container,
+    .top-game-container,
+    .game-update-container,
+    .games {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .game-thumbnail-background,
+    .game-thumbnail-first .game-thumbnail02-image {
+        height: 275px;
+    }
+    .game-thumbnail-first,
+    .new-game-post-first {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .user-area {
+        padding-right: 10px;
+    }
+    #registry-btn {
+        display: none;
+    }
+    .slider {
+        height: 450px;
+    }
+    .slide-info {
+        gap: 10px;
+        padding: 10px;
+    }
+    .slide-info-name {
+        width: auto;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .slide-info-desc {
+        font-size: 16px;
+        height: auto;
+        font-weight: normal;
+        line-height: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .slide-info-btn {
+        width: 110px;
+        height: 40px;
+        margin-top: 7px;
+    }
+    .top-members {
+        margin-top: 16px;
+    }
+    .top-members-container {
+        gap: 16px;
+    }
+    .new-game {
+        margin-top: 0px;
+    }
+    .top-game-type:nth-of-type(n+3) {
+        display: none;
+    }
+    .games-filters .select:nth-of-type(n+2) {
+        display: none;
+    }
+    .filter-btn {
+        width: 125px;
+        gap: 5px;
+    }
+    .games-name-ft {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .games {
+        margin-top: 10px;
+    }
+    .top-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .user-area {
+        display: none;
+    }
+    .logo {
+        margin-left: 0px;
+    }
+    .game-main-left {
+        width: 100%;
+    }
+    .game-gallery {
+        display: none;
+    }
+    .game-info {
+        width: 100%;
+    }
+    img.cover-image, .mobile-media {
+        display: block;
+    }
+    .game-specify {
+        margin-top: 10px;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .game-btns {
+        position: relative;
+    }
+    .game-tabs {
+        gap: 15px;
+    }
+    .game-relate {
+        display: none;
+    }
+    .user-pop-title {
+        margin-top: 0px;
+    }
+    .user-login {
+        margin-top: 25px;
+    }
+    .game-types {
+        gap: 7px;
+    }
+    .my-account-avatar,
+    .user-icon-login {
+        display: block;
+    }
+    .marquee {
+        width: calc(100% - 87px);
+    }
+    .account-container {
+        flex-direction: column;
+        overflow: scroll;
+        width: calc(100% - 20px);
+        padding: 50px 0px;
+        gap: 20px;
+    }
+    .ac-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+    .ac-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 0;
+        gap: 25px;
+        justify-content: center;
+    }
+    .ac-menu-item span {
+        display: none;
+    }
+    .account-line {
+        display: none;
+    }
+    .account-right {
+        overflow-y: scroll;
+        padding: 0 10px;
+        width: auto;
+    }
+    .ac-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .account-left {
+        gap: 10px;
+    }
+    .ac-menu-logout {
+        justify-content: center;
+        padding: 0;
+    }
+    .ac-info-fields {
+        margin-top: 10px;
+    }
+    .ac-info-fields {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .ac-line-hor {
+        margin-top: 15px;
+    }
+    .ac-row .form-group {
+        width: auto;
+    }
+    .ac-summary {
+        margin-top: 20px;
+    }
+    .packages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .momo-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bank-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    img.qr {
+        width: 250px;
+    }
+    .bank-right {
+        justify-content: center;
+    }
+    .history-deposit th:nth-child(3),
+    .history-deposit td:nth-child(3) {
+        display: none;
+    }
+    .history-deposit tr {
+        line-height: 15px;
+    }
+    .acc-cpu {
+        padding-top: 10px;
+    }
+    .user-pc-info {
+        width: 350px;
+    }
+    .galleria-counter {
+        bottom: 20px !important;
+    }
+    .galleria-thumbnails-list .galleria-thumbnails {
+        display: flex;
+        overflow-x: scroll !important;
+    }
+    .galleria-thumbnails-list .galleria-image {
+        min-width: 124px;
+    }
+    
+    .galleria-thumbnails-list {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .galleria-frame {
+        inset: 106px 0px 0px 1px;
+        top: 106px !important;
+    }
+
+    .galleria-frame, .galleria-frame iframe {
+        height: 300px !important;
+    }
+
+    .galleria-theme-classic.galleria-container.videoplay .galleria-info, .galleria-theme-classic.galleria-container.videoplay .galleria-counter {
+        display: block !important;
+    }
+}

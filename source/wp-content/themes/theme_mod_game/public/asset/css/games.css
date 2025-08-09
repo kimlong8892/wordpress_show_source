@@ -1,0 +1,143 @@
+.games-director {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 6px;
+    font-size: 14px;
+    color: #9FA7B5;
+    margin-top: 19px;
+}
+
+.games-director span:last-child {
+    color: #D12142;
+}
+
+.games-name-ft {
+    display: flex;
+    margin-top: 26px;
+}
+
+.games-filters {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.games-search-area {
+    background: #242933;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    width: 518px;
+}
+
+.games-search-area i {
+    width: 24px;
+    height: 24px;
+    color: #9FA7B5;
+    padding-right: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name-ft-input {
+    border: none;
+    width: 100%;
+    outline: none;
+    color: #9FA7B5;
+    padding-left: 16px;
+    border-radius: 12px;
+    font-style: normal;
+    background-color: transparent;
+}
+
+.games-order {
+    order: 2;
+    margin-left: auto;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.games-order .select {
+    width: 136px;
+}
+
+.games {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.paging,
+#pages, .mygame-paging, #mygame-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 37px;
+}
+
+#pages, #mygame-pages {
+    margin-top: auto;
+}
+
+.page, .mygame-page {
+    width: 45px;
+    height: 45px;
+    background: #272A31;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #9FA7B5;
+}
+
+.mygame-page {
+    background: #1a1d24;
+}
+
+.page-active {
+    color: #ffffff;
+    background: #ED7101;
+}
+
+.page:hover, .mygame-page:hover {
+    cursor: pointer;
+    background: #202329;
+}
+
+.filter-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    border: none;
+    background: #d12142;
+    border-radius: 12px;
+}
+
+.filter-btn:hover {
+    cursor: pointer;
+    background: #a51933;
+}
+
+.system-config .top-guide {
+    margin-bottom: 0px;
+}
+
+.can-play {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 15px;
+}
