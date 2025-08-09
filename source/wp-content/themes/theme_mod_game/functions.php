@@ -31,3 +31,7 @@ if (!function_exists('my_theme_register_menus')) {
     add_action('init', 'my_theme_register_menus');
 }
 
+add_filter('show_admin_bar', function($show) {
+    return false;
+});
+

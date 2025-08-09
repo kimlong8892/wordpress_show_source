@@ -72,6 +72,28 @@ if (!function_exists('getFeaturedImage')) {
     }
 }
 
+if (!function_exists('kp_replace_external_domain')) {
+    function kp_replace_external_domain(string $html, string $oldDomain = 'https://taigamekp.com'): string {
+        $siteBase = rtrim(home_url('/'), '/');
+        $replaced = str_replace(
+            [
+                $oldDomain . '//',
+                $oldDomain . '/',
+                '//' . parse_url($oldDomain, PHP_URL_HOST) . '/',
+                parse_url($oldDomain, PHP_URL_HOST),
+            ],
+            [
+                $siteBase . '/',
+                $siteBase . '/',
+                $siteBase . '/',
+                parse_url($siteBase, PHP_URL_HOST),
+            ],
+            $html
+        );
+        return $replaced;
+    }
+}
+
 if (!function_exists('limitText')) {
     function limitText($text, $limit) {
         if (str_word_count($text, 0) > $limit) {
