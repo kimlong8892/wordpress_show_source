@@ -13,65 +13,61 @@
         <a class="redirect" href="<?php echo esc_url(home_url('/')); ?>">Home</a><span>&gt;</span><span><?php single_cat_title(); ?></span>
     </div>
 
-    <div class="games-filters">
-        <div class="select" id="category" type="checkbox">
-            <div class="select-over">
-                <div class="selected" value="<?php echo esc_attr(get_queried_object()->slug ?? ''); ?>" data-id="<?php echo esc_attr(get_queried_object_id()); ?>"><?php single_cat_title(); ?></div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <div class="select-options" style="display:none;"></div>
-        </div>
-        <div class="select" id="ft-type">
-            <div class="select-over">
-                <div class="selected" value="all">Tất cả</div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="select" id="ft-system">
-            <div class="select-over">
-                <div class="selected" value="all">Tất cả cấu hình</div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="select" id="ft-storage">
-            <div class="select-over">
-                <div class="selected" value="all">Tất cả dung lượng</div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="select" id="ft-player">
-            <div class="select-over">
-                <div class="selected" value="all">Single player</div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="select" id="ft-gear">
-            <div class="select-over">
-                <div class="selected" value="all">Bàn phím + chuột</div>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="filter-btn">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <div>Tìm kiếm</div>
-        </div>
-    </div>
+<!--    <div class="games-filters">-->
+<!--        <div class="select" id="category" type="checkbox">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="--><?php //echo esc_attr(get_queried_object()->slug ?? ''); ?><!--" data-id="--><?php //echo esc_attr(get_queried_object_id()); ?><!--">--><?php //single_cat_title(); ?><!--</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--            <div class="select-options" style="display:none;"></div>-->
+<!--        </div>-->
+<!--        <div class="select" id="ft-type">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="all">Tất cả</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="select" id="ft-system">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="all">Tất cả cấu hình</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="select" id="ft-storage">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="all">Tất cả dung lượng</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="select" id="ft-player">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="all">Single player</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="select" id="ft-gear">-->
+<!--            <div class="select-over">-->
+<!--                <div class="selected" value="all">Bàn phím + chuột</div>-->
+<!--                <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="filter-btn">-->
+<!--            <i class="fa fa-search" aria-hidden="true"></i>-->
+<!--            <div>Tìm kiếm</div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="games-name-ft">
-        <div class="games-search-area">
-            <input id="name-ft-input" placeholder="Nhập tên game cần tìm" autocomplete="off">
-            <i class="fa fa fa-search"></i>
-        </div>
-        <div class="games-order">
-            <div>Sắp xếp theo:</div>
-            <div class="select">
-                <div class="select-over">
-                    <div class="selected">Mới nhất</div>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="games-name-ft">-->
+<!--        <div class="games-order">-->
+<!--            <div>Sắp xếp theo:</div>-->
+<!--            <div class="select">-->
+<!--                <div class="select-over">-->
+<!--                    <div class="selected">Mới nhất</div>-->
+<!--                    <i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="games">
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
